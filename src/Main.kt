@@ -27,14 +27,15 @@ fun main() {
     // Загальні витрати
     val total = expenses.sum()
 
-    // Найбільша витрата і її день
+    // Найбільша витрата 
     val maxExpense = expenses.maxOrNull() ?: 0.0
     val maxDayIndex = expenses.indexOf(maxExpense) + 1
 
     // Середня витрата
     val average = total / expenses.size
 
-    // Оцінка витрат
+    // Результати
+    
     val evaluation = when {
         total < 500 -> "Економно"
         total in 500.0..999.99 -> "Помірно"
